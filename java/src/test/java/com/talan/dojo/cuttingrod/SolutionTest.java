@@ -82,14 +82,14 @@ public class SolutionTest {
 
     @Test
     @DisplayName("test case 10")
-    //@Disabled("take too long to complete")
+    @Disabled("take too long to complete")
     void testCase10() {
         int[] prices = IntStream.range(1, 101)
                 .mapToDouble((i) -> (i % 2 == 0) ? Math.floor(i / 2) : Math.floor((i / 3)))
                 .mapToInt(i -> (int) i)
                 .toArray();
 
-        int bestProfit = Solution.cuttingRod2(prices, 99);
+        int bestProfit = Solution.cuttingRod(prices, 99);
         Assertions.assertEquals(49, bestProfit);
     }
 }

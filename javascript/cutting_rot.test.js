@@ -1,5 +1,5 @@
 
-const { cutting, cutting2 } = require('./cutting_rod.js')
+const { cutting } = require('./cutting_rod.js')
 
 
 describe('cutting rod', () => {
@@ -62,7 +62,7 @@ describe('cutting rod', () => {
         const prices = [...Array(100).keys()]
           .map(x => x + 1)
           .map(x => x % 2 == 0 ? Math.floor( x / 2): Math.floor(x / 3))
-      const maxProfit = cutting2(prices, 99)
+      const maxProfit = cutting(prices, 99)
       expect(maxProfit).toBe(49)
     })
 })

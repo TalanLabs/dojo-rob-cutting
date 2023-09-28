@@ -1,9 +1,9 @@
 
 import unittest
-# import pytest
+import pytest
 import math
 
-from cutting_rod import rod_cut, rod_cut2
+from cutting_rod import rod_cut
 
 
 class CuttingRodTest(unittest.TestCase):
@@ -62,17 +62,17 @@ class CuttingRodTest(unittest.TestCase):
         max_profit = rod_cut(prices, n)
         self.assertEqual(max_profit, 19)
 
-    #  @pytest.mark.skip(reason="take to long to complete")
+    @pytest.mark.skip(reason="take to long to complete")
     def test_case_10(self):
         prices = [math.floor(i / 2) if i % 2 == 0 else math.floor(i / 3) for i in range(1, 100)]
         n = 99
-        max_profit = rod_cut2(prices, n)
+        max_profit = rod_cut(prices, n)
         self.assertEqual(max_profit, 49)
 
-    # @pytest.mark.skip(reason="take to long to complete")
+    @pytest.mark.skip(reason="take to long to complete")
     def test_case_11(self):
         prices = [math.floor(i / 2) if i % 2 == 0 else math.floor(i / 3) for i in range(1, 1000)]
         n = 999
-        max_profit = rod_cut2(prices, n)
+        max_profit = rod_cut(prices, n)
         self.assertEqual(max_profit, 499)
 

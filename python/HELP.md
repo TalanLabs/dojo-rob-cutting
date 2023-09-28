@@ -33,13 +33,13 @@ Next, run the `pytest` command in your terminal, replacing:
 
 Linux/MacOS
 ```bash
-$ python3 -m pytest  coin_change_test.py
+$ python3 -m pytest  cutting_rob_test.py
 ==================== 7 passed in 0.08s ====================
 ```
 
 Windows
 ```powershell
-PS C:\Users\foobar> py -m pytest  coin_change_test.py
+PS C:\Users\foobar> py -m pytest  cutting_rob_test.py
 ==================== 7 passed in 0.08s ====================
 ```
 
